@@ -9,11 +9,11 @@
 
 
 one:
-  name: Starting Pic
+  name: josh3.jpg
   content_type: image/jpeg
   data: <%= binary_fixture_data("josh3.jpg") %>
 
 two:
-  name: Second Pic
+  name: josh4.jpg
   content_type: image/jpeg
   data: <%= binary_fixture_data("josh4.jpg") %>
