@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  content_type: MyString
-  data: 
+  name: Starting Pic
+  content_type: image/jpeg
+  data: <%= File.open("images/josh3.jpg") {|f| f.read} %>
 
 two:
-  name: MyString
-  content_type: MyString
-  data: 
+  name: Second Pic
+  content_type: image/jpeg
+  data: <%= File.open("images/josh4.jpg") {|f| f.read} %>
