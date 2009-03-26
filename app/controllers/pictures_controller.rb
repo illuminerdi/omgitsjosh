@@ -20,6 +20,10 @@ class PicturesController < ApplicationController
       format.xml  { render :xml => @picture }
     end
   end
+  
+  def random
+    @picture = Picture.first(:order => "random()")
+  end
 
   # GET /pictures/new
   # GET /pictures/new.xml
