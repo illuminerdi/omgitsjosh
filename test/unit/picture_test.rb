@@ -20,6 +20,14 @@ class PictureTest < ActiveSupport::TestCase
     assert picture.errors.on(:content_type)
   end
   
+  test "picture content type is an image" do
+    picture = pictures(:one)
+    picture.content_type = "text/plain"
+    
+    assert ! picture.valid?
+    assert picture.errors.on(:content_type)
+  end
+  
   test "picture has data" do
     picture = Picture.new
     picture.name = "josh3.jpg"

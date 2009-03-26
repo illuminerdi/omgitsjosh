@@ -9,11 +9,8 @@
 
 <% for picture in @pictures %>
   <tr>
-    <td><%=h picture.name %></td>
-    <td><%=h picture.content_type %></td>
-    <td><%=h picture.data %></td>
-    <td><%= link_to 'Show', picture %></td>
-    <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+    <td><img src="<%= url_for :action => 'picture', :id => picture.id %>" /></td>
+    <td><%= link_to 'Embiggen', picture %></td>
     <td><%= link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>

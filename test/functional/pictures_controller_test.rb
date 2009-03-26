@@ -10,6 +10,11 @@ class PicturesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    
+    assert_tag :tag => "input", :attributes => {
+      :name => "picture[uploaded_picture]",
+      :type => "file"
+    }
   end
 
   test "should create picture" do
@@ -29,15 +34,20 @@ class PicturesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
-    get :edit, :id => pictures(:one).id
-    assert_response :success
-  end
+  #test "should get edit" do
+  #  get :edit, :id => pictures(:one).id
+  #  assert_response :success
+  #  
+  #  assert_tag :tag => "input", :attributes => {
+  #    :name => "picture[uploaded_picture]",
+  #    :type => "file"
+  #  }
+  #end
 
-  test "should update picture" do
-    put :update, :id => pictures(:one).id, :picture => { }
-    assert_redirected_to picture_path(assigns(:picture))
-  end
+  #test "should update picture" do
+  #  put :update, :id => pictures(:one).id, :picture => { }
+  #  assert_redirected_to picture_path(assigns(:picture))
+  #end
 
   test "should destroy picture" do
     assert_difference('Picture.count', -1) do

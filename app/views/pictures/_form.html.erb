@@ -1,0 +1,11 @@
+<% form_for(@picture) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :picture %><br />
+    <%= f.file_field :uploaded_picture %>
+  </p>
+  <p>
+    <%= f.submit button_text %>
+  </p>
+<% end %>

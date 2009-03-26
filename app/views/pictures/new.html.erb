@@ -1,23 +1,5 @@
 <h1>New picture</h1>
 
-<% form_for(@picture) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :content_type %><br />
-    <%= f.text_field :content_type %>
-  </p>
-  <p>
-    <%= f.label :data %><br />
-    <%= f.text_field :data %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+<%= render :partial => 'form', :locals => { :button_text => "Create" } %>
 
 <%= link_to 'Back', pictures_path %>

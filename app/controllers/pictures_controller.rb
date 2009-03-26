@@ -35,6 +35,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1/edit
   def edit
     @picture = Picture.find(params[:id])
+    redirect_to(@picture)
   end
 
   # POST /pictures
@@ -81,5 +82,14 @@ class PicturesController < ApplicationController
       format.html { redirect_to(pictures_url) }
       format.xml  { head :ok }
     end
+  end
+  
+  # NEW METHODS
+  def picture 
+    @picture = Picture.find(params[:id]) 
+    send_data(@picture.data, 
+      :filename => @picture.name, 
+      :type => @picture.content_type, 
+      :disposition => "inline")
   end
 end
