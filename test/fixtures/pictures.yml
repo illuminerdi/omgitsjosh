@@ -1,11 +1,19 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+<%
+  def binary_fixture_data(name)
+    filename = "#{RAILS_ROOT}/test/fixtures/images/#{name}"
+    data = File.open(filename,'rb').read
+    "!binary | #{[data].pack('m').gsub(/\n/,"\n    ")}\n"
+  end
+%>
+
 
 one:
   name: Starting Pic
   content_type: image/jpeg
-  data: <%= File.open("images/josh3.jpg") {|f| f.read} %>
+  data: <%= binary_fixture_data("josh3.jpg") %>
 
 two:
   name: Second Pic
   content_type: image/jpeg
-  data: <%= File.open("images/josh4.jpg") {|f| f.read} %>
+  data: <%= binary_fixture_data("josh4.jpg") %>
