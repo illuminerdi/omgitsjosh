@@ -1,0 +1,9 @@
+db/*.sqlite3
+.*.swp
+tags
+log/*.log
+log
+.project
+.loadpath
+.tmp_*
+*.dat
