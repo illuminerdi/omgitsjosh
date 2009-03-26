@@ -1,3 +1,18 @@
 <p>
   <img src="<%= url_for :action => 'picture', :id => @picture.id %>" />
 </p>
+<%= render :partial => "sticky", :collection => @picture.comments %>
+<p>
+  <% form_for @comment do |f| %>
+		<%= f.error_messages %>
+	
+	  <p>
+	    <%= f.label :comment %><br />
+	    <%= f.text_field :body %>
+			<%= f.hidden_field :picture_id %>
+	  </p>
+	  <p>
+	    <%= f.submit "Create" %>
+	  </p>
+	<% end %>	
+</p>

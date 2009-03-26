@@ -23,6 +23,7 @@ class PicturesController < ApplicationController
   
   def random
     @picture = Picture.first(:order => "random()")
+    @comment = Comment.new({:picture_id => @picture.id})
   end
 
   # GET /pictures/new
