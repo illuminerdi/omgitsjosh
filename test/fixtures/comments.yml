@@ -1,7 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  body: MyText
+  picture: one
+  body: This is so STUPID!!1!
 
 two:
-  body: MyText
+  picture: two
+  body: You are a very ugly individual.
+  
+three:
+  picture: one
+  body: This is the dumbest site evar.

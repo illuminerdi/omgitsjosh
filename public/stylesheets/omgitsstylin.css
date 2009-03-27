@@ -1,14 +1,22 @@
 body {
-	
+  background-color: yellow;
+}
+
+h1 {
+  font-size: 5em;
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline blink;
+}
+#container {
+  margin: 0px auto;
+  text-align: center;
 }
 
 .sticky {
-	background-position-x: left;
-	background-position-y: top;
-	background-repeat: no-repeat;
 	width: 200px;
 	height: 193px;
 	position: absolute;
-	top: 0px;
-	left: 0px;
+	top: 490px;
+	left: 800px;
 }

@@ -1,6 +1,6 @@
 <p>
   <b>Body:</b>
-  <%=h @comment.body %>
+  <img src="<%= url_for(:controller => :comments, :action => :sticky, :params => {:id => @comment.id}) %>" />
 </p>
 
 

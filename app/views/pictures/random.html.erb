@@ -1,7 +1,9 @@
-<p>
-  <img src="<%= url_for :action => 'picture', :id => @picture.id %>" />
-</p>
-<%= render :partial => "sticky", :collection => @picture.comments %>
+<h1>OMG IT&quot;S JOSH!!1!</h1>
+<div id="pic_frame">
+	<img src="<%= url_for :action => 'picture', :id => @picture.id %>" />
+</div>
+
+<%= render :partial => "sticky", :locals => {:id => @sticky} %>
 <p>
   <% form_for @comment do |f| %>
 		<%= f.error_messages %>

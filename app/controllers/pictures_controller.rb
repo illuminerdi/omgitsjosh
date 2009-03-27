@@ -24,6 +24,10 @@ class PicturesController < ApplicationController
   def random
     @picture = Picture.first(:order => "random()")
     @comment = Comment.new({:picture_id => @picture.id})
+    comments = Comment.find(:all, :select => "id", :limit => 10, 
+      :conditions => {:picture_id => @picture.id}, :order => "created_at DESC")
+    comments = comments.collect(&:id)
+    @sticky = comments[rand(comments.size)]
   end
 
   # GET /pictures/new
