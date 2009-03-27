@@ -1,0 +1,14 @@
+body {
+	
+}
+
+.sticky {
+	background-position-x: left;
+	background-position-y: top;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 193px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
