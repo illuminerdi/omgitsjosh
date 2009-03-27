@@ -5,7 +5,7 @@
 <% if not @sticky.nil? %>
   <%= render :partial => "sticky", :locals => {:id => @sticky} %>
 <% end %>
-<p>
+<div id="comment-form">
   <% form_for @comment do |f| %>
 		<%= f.error_messages %>
 	
@@ -18,4 +18,4 @@
 	    <%= f.submit "Create" %>
 	  </p>
 	<% end %>	
-</p>
+</div>

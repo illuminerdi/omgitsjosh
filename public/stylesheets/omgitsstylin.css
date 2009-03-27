@@ -20,3 +20,7 @@ h1 {
 	top: 490px;
 	left: 800px;
 }
+
+#comment-form {
+	background-color: orange;
+}
