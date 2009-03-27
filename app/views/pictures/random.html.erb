@@ -5,17 +5,18 @@
 <% if not @sticky.nil? %>
   <%= render :partial => "sticky", :locals => {:id => @sticky} %>
 <% end %>
+
 <div id="comment-form">
   <% form_for @comment do |f| %>
-		<%= f.error_messages %>
-	
-	  <p>
-	    <%= f.label :comment %><br />
-	    <%= f.text_field :body, :maxlength => 140, :size => 50 %>
-			<%= f.hidden_field :picture_id %>
-	  </p>
-	  <p>
-	    <%= f.submit "Create" %>
-	  </p>
-	<% end %>	
+    <%= f.error_messages %>
+  
+    <p>
+      <%= f.label :comment %><br />
+      <%= f.text_field :body, :maxlength => 140, :size => 50 %>
+      <%= f.hidden_field :picture_id %>
+    </p>
+    <p>
+      <%= f.submit "Create" %>
+    </p>
+  <% end %> 
 </div>
