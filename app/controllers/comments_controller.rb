@@ -110,7 +110,7 @@ class CommentsController < ApplicationController
     }
     formatted_cap = "#{formatted_cap}\n#{cap_line}"
     
-    text.annotate(anno,anno.columns,anno.rows,15,40, formatted_cap) {
+    text.annotate(anno,anno.columns,anno.rows,15,25, formatted_cap) {
       self.gravity = Magick::NorthGravity
       self.pointsize = 15
       self.stroke = 'transparent'

@@ -3,5 +3,5 @@ class Comment < ActiveRecord::Base
   
   belongs_to :picture
   
-  validates_length_of :body, :maximum => 140
+  validates_length_of :body, :maximum => 90
 end
