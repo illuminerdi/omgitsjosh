@@ -2,8 +2,9 @@
 <div id="pic_frame">
 	<img src="<%= url_for :action => 'picture', :id => @picture.id %>" />
 </div>
-
-<%= render :partial => "sticky", :locals => {:id => @sticky} %>
+<% if not @sticky.nil? %>
+  <%= render :partial => "sticky", :locals => {:id => @sticky} %>
+<% end %>
 <p>
   <% form_for @comment do |f| %>
 		<%= f.error_messages %>

@@ -20,7 +20,7 @@ class CommentsControllerTest < ActionController::TestCase
       }
     end
 
-    assert_redirected_to comment_path(assigns(:comment))
+    assert_redirected_to root_path
   end
 
   test "should show comment" do
