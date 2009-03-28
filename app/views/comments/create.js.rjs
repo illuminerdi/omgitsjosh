@@ -1,0 +1,3 @@
+page.replace_html("sticky_container", :partial => "pictures/sticky", :locals => {:id => @comment})
+
+page[:sticky_container].visual_effect :blind_down
