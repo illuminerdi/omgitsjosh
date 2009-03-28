@@ -82,4 +82,17 @@ class UsersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def login
+    if request.post? 
+      user = User.authenticate(params[:name], params[:password]) 
+      if user 
+        session[:user_id] = user.id 
+        redirect_to(pictures_url) 
+      else 
+        flash[:notice] = "Invalid user/password combination"
+        redirect_to(:action => "login")
+      end 
+    end 
+  end
 end

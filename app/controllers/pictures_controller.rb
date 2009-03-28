@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_filter :authorize, :except => [:random, :picture]
+  
   # GET /pictures
   # GET /pictures.xml
   def index

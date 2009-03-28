@@ -1,6 +1,8 @@
 require 'RMagick'
 
 class CommentsController < ApplicationController
+  before_filter :authorize, :except => [:create, :sticky]
+  
   # GET /comments
   # GET /comments.xml
   def index
