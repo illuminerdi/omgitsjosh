@@ -16,7 +16,7 @@ a.big_stupid_title:visited {
 	color: #000000;
 }
 a.big_stupid_title:hover {
-	color: #000080;
+	color: #FFA500;
 	background:none;
 }
 
@@ -34,5 +34,5 @@ a.big_stupid_title:hover {
 }
 
 #comment-form {
-	background-color: orange;
+	background-color: #FFA500;
 }
