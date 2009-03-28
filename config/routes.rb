@@ -1,4 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'users/login', :controller => 'users', :action => 'login'
   map.resources :users
 
   map.resources :comments
