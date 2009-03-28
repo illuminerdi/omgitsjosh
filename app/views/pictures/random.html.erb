@@ -2,12 +2,14 @@
 <div id="pic_frame">
 	<img src="<%= url_for :action => 'picture', :id => @picture.id %>" />
 </div>
-<% if not @sticky.nil? %>
-  <%= render :partial => "sticky", :locals => {:id => @sticky} %>
-<% end %>
+<div id="sticky_container">
+	<% if not @sticky.nil? %>
+	  <%= render :partial => "sticky", :locals => {:id => @sticky} %>
+	<% end %>
+</div>
 
 <div id="comment-form">
-  <% form_for @comment do |f| %>
+  <% form_remote_for @comment, :complete => "$('comment_body').value = ''" do |f| %>
     <%= f.error_messages %>
   
     <p>
