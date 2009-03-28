@@ -8,6 +8,7 @@
 <% for comment in @comments %>
   <tr>
     <td><%=h comment.body %></td>
+		<td><%= link_to "Picture #{comment.picture.name}", comment.picture %>
     <td><%= link_to 'Show', comment %></td>
     <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
     <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
