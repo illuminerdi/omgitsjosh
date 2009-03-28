@@ -3,11 +3,23 @@ body {
 }
 
 h1 {
+}
+
+a.big_stupid_title {
+	color: #000000;
   font-size: 5em;
   font-style: italic;
   font-weight: bold;
   text-decoration: underline blink;
 }
+a.big_stupid_title:visited {
+	color: #000000;
+}
+a.big_stupid_title:hover {
+	color: #000080;
+	background:none;
+}
+
 #container {
   margin: 0px auto;
   text-align: center;
