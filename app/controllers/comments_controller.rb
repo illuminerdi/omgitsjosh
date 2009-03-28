@@ -47,10 +47,12 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         #flash[:notice] = 'Comment was successfully created.'
+        format.js if request.xhr?
         format.html { redirect_to(root_url) }
         format.xml  { render :xml => @comment, :status => :created, :location => @comment }
       else
-        format.html { render :action => "new" }
+        flash[:notice] = 'Unable to save your comment at this time. Jerk.'
+        format.html { redirect_to(root_url) }
         format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
       end
     end
