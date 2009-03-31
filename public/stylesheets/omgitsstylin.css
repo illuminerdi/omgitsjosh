@@ -7,7 +7,7 @@ h1 {
 
 a.big_stupid_title {
 	color: #000000;
-  font-size: 5em;
+  font-size: 4.65em;
   font-style: italic;
   font-weight: bold;
   text-decoration: underline blink;
@@ -22,17 +22,24 @@ a.big_stupid_title:hover {
 
 #container {
   margin: 0px auto;
-  text-align: center;
+  padding-left: 200px;
 }
 
 .sticky {
 	width: 200px;
 	height: 193px;
 	position: absolute;
-	top: 490px;
-	left: 800px;
+	top: -40px;
+	left: 475px;
+}
+
+#sticky_container {
+	position:relative;
 }
 
 #comment-form {
 	background-color: #FFA500;
+	width: 425px;
+	padding-left: 15px;
+	padding-bottom: 1px;
 }
